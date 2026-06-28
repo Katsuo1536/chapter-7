@@ -1,13 +1,13 @@
 import { Fragment, useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
 import { time } from "../../utils/time";
-import type { List } from '../../utils/list';
+import type { Post } from '../../utils/post';
 
 export const Article = () => {
 
   const { id } = useParams<string>();
 
-  const [post, setPost] = useState<List | null>(null);
+  const [post, setPost] = useState<Post | null>(null);
   const [load, setLoad] = useState<boolean>(true);
 
   useEffect(() => {

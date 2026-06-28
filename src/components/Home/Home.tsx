@@ -1,12 +1,12 @@
 import { Fragment, useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { time } from "../../utils/time";
-import type { List } from '../../utils/list';
+import type { Post } from '../../utils/post';
 
 
 export const Home = () => {
 
-  const [posts, setPosts] = useState<[]>([]);
+  const [posts, setPosts] = useState<Post[]>([]);
   const [load, setLoad] = useState<boolean>(true);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export const Home = () => {
     <>
       <span className="text-2xl justify-between text-left m-30">記事一覧</span>
       {
-        posts.map((elem: List) => (
+        posts.map((elem: Post) => (
           <Fragment key={elem.id} >
             <Link to={`articles/${elem.id}`}>
               <main className="flex justify-between mx-auto container items-center">

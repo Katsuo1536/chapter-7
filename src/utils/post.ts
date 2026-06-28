@@ -1,4 +1,4 @@
-export type List = {
+export type Post = {
   id: string,
   thumbnailUrl: string,
   createdAt: string,
